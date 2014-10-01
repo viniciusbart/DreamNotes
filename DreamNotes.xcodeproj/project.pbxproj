@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC8BBA8319DCBB7900C6156D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8BBA8219DCBB7900C6156D /* AppDelegate.swift */; };
+		CC8BBA8619DCBB7900C6156D /* DreamNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC8BBA8419DCBB7900C6156D /* DreamNotes.xcdatamodeld */; };
+		CC8BBA8819DCBB7900C6156D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8BBA8719DCBB7900C6156D /* ViewController.swift */; };
+		CC8BBA8B19DCBB7900C6156D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8BBA8919DCBB7900C6156D /* Main.storyboard */; };
+		CC8BBA8D19DCBB7900C6156D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC8BBA8C19DCBB7900C6156D /* Images.xcassets */; };
+		CC8BBA9019DCBB7900C6156D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC8BBA8E19DCBB7900C6156D /* LaunchScreen.xib */; };
+		CC8BBA9C19DCBB7900C6156D /* DreamNotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8BBA9B19DCBB7900C6156D /* DreamNotesTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC8BBA9619DCBB7900C6156D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC8BBA7519DCBB7900C6156D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC8BBA7C19DCBB7900C6156D;
+			remoteInfo = DreamNotes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CC8BBA7D19DCBB7900C6156D /* DreamNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC8BBA8119DCBB7900C6156D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC8BBA8219DCBB7900C6156D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC8BBA8519DCBB7900C6156D /* DreamNotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DreamNotes.xcdatamodel; sourceTree = "<group>"; };
+		CC8BBA8719DCBB7900C6156D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC8BBA8A19DCBB7900C6156D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC8BBA8C19DCBB7900C6156D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CC8BBA8F19DCBB7900C6156D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CC8BBA9519DCBB7900C6156D /* DreamNotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreamNotesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC8BBA9A19DCBB7900C6156D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC8BBA9B19DCBB7900C6156D /* DreamNotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamNotesTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC8BBA7A19DCBB7900C6156D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC8BBA9219DCBB7900C6156D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC8BBA7419DCBB7900C6156D = {
+			isa = PBXGroup;
+			children = (
+				CC8BBA7F19DCBB7900C6156D /* DreamNotes */,
+				CC8BBA9819DCBB7900C6156D /* DreamNotesTests */,
+				CC8BBA7E19DCBB7900C6156D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC8BBA7E19DCBB7900C6156D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC8BBA7D19DCBB7900C6156D /* DreamNotes.app */,
+				CC8BBA9519DCBB7900C6156D /* DreamNotesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC8BBA7F19DCBB7900C6156D /* DreamNotes */ = {
+			isa = PBXGroup;
+			children = (
+				CC8BBA8219DCBB7900C6156D /* AppDelegate.swift */,
+				CC8BBA8719DCBB7900C6156D /* ViewController.swift */,
+				CC8BBA8919DCBB7900C6156D /* Main.storyboard */,
+				CC8BBA8C19DCBB7900C6156D /* Images.xcassets */,
+				CC8BBA8E19DCBB7900C6156D /* LaunchScreen.xib */,
+				CC8BBA8419DCBB7900C6156D /* DreamNotes.xcdatamodeld */,
+				CC8BBA8019DCBB7900C6156D /* Supporting Files */,
+			);
+			path = DreamNotes;
+			sourceTree = "<group>";
+		};
+		CC8BBA8019DCBB7900C6156D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CC8BBA8119DCBB7900C6156D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CC8BBA9819DCBB7900C6156D /* DreamNotesTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC8BBA9B19DCBB7900C6156D /* DreamNotesTests.swift */,
+				CC8BBA9919DCBB7900C6156D /* Supporting Files */,
+			);
+			path = DreamNotesTests;
+			sourceTree = "<group>";
+		};
+		CC8BBA9919DCBB7900C6156D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CC8BBA9A19DCBB7900C6156D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC8BBA7C19DCBB7900C6156D /* DreamNotes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC8BBA9F19DCBB7900C6156D /* Build configuration list for PBXNativeTarget "DreamNotes" */;
+			buildPhases = (
+				CC8BBA7919DCBB7900C6156D /* Sources */,
+				CC8BBA7A19DCBB7900C6156D /* Frameworks */,
+				CC8BBA7B19DCBB7900C6156D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DreamNotes;
+			productName = DreamNotes;
+			productReference = CC8BBA7D19DCBB7900C6156D /* DreamNotes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC8BBA9419DCBB7900C6156D /* DreamNotesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC8BBAA219DCBB7900C6156D /* Build configuration list for PBXNativeTarget "DreamNotesTests" */;
+			buildPhases = (
+				CC8BBA9119DCBB7900C6156D /* Sources */,
+				CC8BBA9219DCBB7900C6156D /* Frameworks */,
+				CC8BBA9319DCBB7900C6156D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC8BBA9719DCBB7900C6156D /* PBXTargetDependency */,
+			);
+			name = DreamNotesTests;
+			productName = DreamNotesTests;
+			productReference = CC8BBA9519DCBB7900C6156D /* DreamNotesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC8BBA7519DCBB7900C6156D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Baza Inc";
+				TargetAttributes = {
+					CC8BBA7C19DCBB7900C6156D = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					CC8BBA9419DCBB7900C6156D = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = CC8BBA7C19DCBB7900C6156D;
+					};
+				};
+			};
+			buildConfigurationList = CC8BBA7819DCBB7900C6156D /* Build configuration list for PBXProject "DreamNotes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC8BBA7419DCBB7900C6156D;
+			productRefGroup = CC8BBA7E19DCBB7900C6156D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC8BBA7C19DCBB7900C6156D /* DreamNotes */,
+				CC8BBA9419DCBB7900C6156D /* DreamNotesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC8BBA7B19DCBB7900C6156D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC8BBA8B19DCBB7900C6156D /* Main.storyboard in Resources */,
+				CC8BBA9019DCBB7900C6156D /* LaunchScreen.xib in Resources */,
+				CC8BBA8D19DCBB7900C6156D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC8BBA9319DCBB7900C6156D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC8BBA7919DCBB7900C6156D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC8BBA8819DCBB7900C6156D /* ViewController.swift in Sources */,
+				CC8BBA8319DCBB7900C6156D /* AppDelegate.swift in Sources */,
+				CC8BBA8619DCBB7900C6156D /* DreamNotes.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC8BBA9119DCBB7900C6156D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC8BBA9C19DCBB7900C6156D /* DreamNotesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC8BBA9719DCBB7900C6156D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC8BBA7C19DCBB7900C6156D /* DreamNotes */;
+			targetProxy = CC8BBA9619DCBB7900C6156D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CC8BBA8919DCBB7900C6156D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC8BBA8A19DCBB7900C6156D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC8BBA8E19DCBB7900C6156D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC8BBA8F19DCBB7900C6156D /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC8BBA9D19DCBB7900C6156D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CC8BBA9E19DCBB7900C6156D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC8BBAA019DCBB7900C6156D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DreamNotes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CC8BBAA119DCBB7900C6156D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DreamNotes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CC8BBAA319DCBB7900C6156D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DreamNotesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DreamNotes.app/DreamNotes";
+			};
+			name = Debug;
+		};
+		CC8BBAA419DCBB7900C6156D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DreamNotesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DreamNotes.app/DreamNotes";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC8BBA7819DCBB7900C6156D /* Build configuration list for PBXProject "DreamNotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC8BBA9D19DCBB7900C6156D /* Debug */,
+				CC8BBA9E19DCBB7900C6156D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC8BBA9F19DCBB7900C6156D /* Build configuration list for PBXNativeTarget "DreamNotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC8BBAA019DCBB7900C6156D /* Debug */,
+				CC8BBAA119DCBB7900C6156D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CC8BBAA219DCBB7900C6156D /* Build configuration list for PBXNativeTarget "DreamNotesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC8BBAA319DCBB7900C6156D /* Debug */,
+				CC8BBAA419DCBB7900C6156D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CC8BBA8419DCBB7900C6156D /* DreamNotes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CC8BBA8519DCBB7900C6156D /* DreamNotes.xcdatamodel */,
+			);
+			currentVersion = CC8BBA8519DCBB7900C6156D /* DreamNotes.xcdatamodel */;
+			path = DreamNotes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CC8BBA7519DCBB7900C6156D /* Project object */;
+}
