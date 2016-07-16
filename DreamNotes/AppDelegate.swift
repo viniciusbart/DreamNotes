@@ -14,10 +14,74 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        // ----- iOS Version -----
+        func SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(version: NSString) -> Bool {
+            return UIDevice.currentDevice().systemVersion.compare(version as String,
+                options: NSStringCompareOptions.NumericSearch) != NSComparisonResult.OrderedAscending
+        }
+        
+        // ----- STYLE ------
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+        let navigationBarAppearace = UINavigationBar.appearance()
+        
+        navigationBarAppearace.tintColor = uicolorFromHex(0xffffff)
+        navigationBarAppearace.barTintColor = uicolorFromHex(0x020202)
+        // change navigation item title color
+        navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        
+        /* ---------------------------------------------------- */
+        
+        if SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO("8"){
+            // Actions
+            let firstAction :UIMutableUserNotificationAction = UIMutableUserNotificationAction()
+            firstAction.identifier = "FIRST_ACTION"
+            firstAction.title = NSLocalizedString("No", comment: "No")
+            firstAction.destructive = true
+            firstAction.authenticationRequired = false
+            firstAction.activationMode = UIUserNotificationActivationMode.Background
+            
+            let secondAction :UIMutableUserNotificationAction = UIMutableUserNotificationAction()
+            secondAction.identifier = "SECOND_ACTION"
+            secondAction.title = NSLocalizedString("Note", comment: "Note")
+            secondAction.destructive = false
+            secondAction.authenticationRequired = false
+            secondAction.activationMode = UIUserNotificationActivationMode.Foreground
+            
+            // Category
+            let firstCategory:UIMutableUserNotificationCategory = UIMutableUserNotificationCategory()
+            firstCategory.identifier = "CATEGORY"
+            firstCategory.setActions([firstAction,secondAction], forContext: UIUserNotificationActionContext.Default)
+            firstCategory.setActions([firstAction,secondAction], forContext: UIUserNotificationActionContext.Minimal)
+            
+            application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: UIUserNotificationType([.Sound, .Alert, .Badge]), categories: (NSSet(array: [firstCategory])) as? Set<UIUserNotificationCategory>))
+            
+        }
+        
         return true
+    }
+    
+    func application(application: UIApplication,
+        handleActionWithIdentifier identifier:String?,
+        forLocalNotification notification:UILocalNotification,
+        completionHandler: (() -> Void)){
+            
+            if (identifier == "FIRST_ACTION") {
+                NSNotificationCenter.defaultCenter().postNotificationName("actionNoPressed", object: nil)
+            } else if (identifier == "SECOND_ACTION") {
+                NSNotificationCenter.defaultCenter().postNotificationName("actionNotePressed", object: nil)
+            }
+            completionHandler()
+    }
+    
+    //Define colors in hex values
+    func uicolorFromHex(rgbValue:UInt32)->UIColor{
+        let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
+        let green = CGFloat((rgbValue & 0x00FF00) >> 8)/256.0
+        let blue = CGFloat(rgbValue & 0x0000FF)/256.0
+        
+        return UIColor(red:red, green:green, blue:blue, alpha:1.0)
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -28,6 +92,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        //println(UIApplication.sharedApplication().scheduledLocalNotifications)
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
@@ -36,6 +101,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        //println(UIApplication.sharedApplication().scheduledLocalNotifications)
     }
 
     func applicationWillTerminate(application: UIApplication) {
@@ -49,13 +115,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     lazy var applicationDocumentsDirectory: NSURL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "br.com.BazaInc.DreamNotes" in the application's documents Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
-        return urls[urls.count-1] as NSURL
+        return urls[urls.count-1] 
     }()
 
     lazy var managedObjectModel: NSManagedObjectModel = {
         // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
         let modelURL = NSBundle.mainBundle().URLForResource("DreamNotes", withExtension: "momd")!
-        return NSManagedObjectModel(contentsOfURL: modelURL)
+        return NSManagedObjectModel(contentsOfURL: modelURL)!
     }()
 
     lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator? = {
@@ -65,17 +131,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("DreamNotes.sqlite")
         var error: NSError? = nil
         var failureReason = "There was an error creating or loading the application's saved data."
-        if coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil, error: &error) == nil {
+        do {
+            try coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil )
+        } catch {
             coordinator = nil
             // Report any error we got.
             let dict = NSMutableDictionary()
             dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data"
             dict[NSLocalizedFailureReasonErrorKey] = failureReason
-            dict[NSUnderlyingErrorKey] = error
-            error = NSError.errorWithDomain("YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict)
+            print("deu merda: \(error)")
+            //dict[NSUnderlyingErrorKey] = error
+            
+            //error = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict as [NSObject : AnyObject])
             // Replace this with code to handle the error appropriately.
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog("Unresolved error \(error), \(error!.userInfo)")
+            //NSLog("Unresolved error \(error), \(error.userInfo)")
             abort()
         }
         
@@ -97,8 +167,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func saveContext () {
         if let moc = self.managedObjectContext {
-            var error: NSError? = nil
-            if moc.hasChanges && !moc.save(&error) {
+            let error: NSError? = nil
+            if moc.hasChanges {//&& !moc.save(&error)
                 // Replace this implementation with code to handle the error appropriately.
                 // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 NSLog("Unresolved error \(error), \(error!.userInfo)")

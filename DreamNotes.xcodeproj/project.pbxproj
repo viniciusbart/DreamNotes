@@ -7,13 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		812762AA1B3546BF00461FD3 /* BedtimeCalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812762A91B3546BF00461FD3 /* BedtimeCalcViewController.swift */; };
+		814169161D306C0900230F6B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC98BAF91A5E037900B9A182 /* AdSupport.framework */; };
+		817BD26A1B3A3D3E0069BC69 /* BedtimeCalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812762A91B3546BF00461FD3 /* BedtimeCalcViewController.swift */; };
+		817BD26D1B3BAFD60069BC69 /* WakeUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817BD26C1B3BAFD60069BC69 /* WakeUpViewController.swift */; };
+		817BD26E1B3BAFD60069BC69 /* WakeUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817BD26C1B3BAFD60069BC69 /* WakeUpViewController.swift */; };
+		CC15EBED19DE1F7C00E28BB0 /* DreamUpdaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15EBEC19DE1F7C00E28BB0 /* DreamUpdaterViewController.swift */; };
+		CC2285EB19EA676000E26679 /* SetNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2285EA19EA676000E26679 /* SetNotificationViewController.swift */; };
+		CC31059D19F2328C00FE94B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC31059C19F2328C00FE94B0 /* Images.xcassets */; };
 		CC8BBA8319DCBB7900C6156D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8BBA8219DCBB7900C6156D /* AppDelegate.swift */; };
 		CC8BBA8619DCBB7900C6156D /* DreamNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC8BBA8419DCBB7900C6156D /* DreamNotes.xcdatamodeld */; };
-		CC8BBA8819DCBB7900C6156D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8BBA8719DCBB7900C6156D /* ViewController.swift */; };
 		CC8BBA8B19DCBB7900C6156D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8BBA8919DCBB7900C6156D /* Main.storyboard */; };
-		CC8BBA8D19DCBB7900C6156D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC8BBA8C19DCBB7900C6156D /* Images.xcassets */; };
-		CC8BBA9019DCBB7900C6156D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC8BBA8E19DCBB7900C6156D /* LaunchScreen.xib */; };
 		CC8BBA9C19DCBB7900C6156D /* DreamNotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8BBA9B19DCBB7900C6156D /* DreamNotesTests.swift */; };
+		CC8BBAA619DCBBC900C6156D /* ListaPrincipalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8BBAA519DCBBC900C6156D /* ListaPrincipalTableViewController.swift */; };
+		CC8BBAA819DCBE2B00C6156D /* DreamEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8BBAA719DCBE2B00C6156D /* DreamEditorViewController.swift */; };
+		CC8BBAAA19DCC4EC00C6156D /* Dreams.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8BBAA919DCC4EC00C6156D /* Dreams.swift */; };
+		CCC0D11E1A12E9F500C36D8E /* ShareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC0D11D1A12E9F500C36D8E /* ShareVC.swift */; };
+		CCC1C88B1A743A7200435FC6 /* SetNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2285EA19EA676000E26679 /* SetNotificationViewController.swift */; };
+		CCC1C88C1A743A7200435FC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8BBA8219DCBB7900C6156D /* AppDelegate.swift */; };
+		CCC1C88D1A743A7200435FC6 /* DreamEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8BBAA719DCBE2B00C6156D /* DreamEditorViewController.swift */; };
+		CCC1C88E1A743A7200435FC6 /* DreamUpdaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15EBEC19DE1F7C00E28BB0 /* DreamUpdaterViewController.swift */; };
+		CCC1C88F1A743A7200435FC6 /* ShareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC0D11D1A12E9F500C36D8E /* ShareVC.swift */; };
+		CCC1C8901A743A7200435FC6 /* DreamNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC8BBA8419DCBB7900C6156D /* DreamNotes.xcdatamodeld */; };
+		CCC1C8911A743A7200435FC6 /* ListaPrincipalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8BBAA519DCBBC900C6156D /* ListaPrincipalTableViewController.swift */; };
+		CCC1C8921A743A7200435FC6 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD222D319E0B8EF0003047B /* CustomCell.swift */; };
+		CCC1C8931A743A7200435FC6 /* Dreams.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8BBAA919DCC4EC00C6156D /* Dreams.swift */; };
+		CCC1C8951A743A7200435FC6 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC98BAF91A5E037900B9A182 /* AdSupport.framework */; };
+		CCC1C8981A743A7200435FC6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC31059C19F2328C00FE94B0 /* Images.xcassets */; };
+		CCC1C8991A743A7200435FC6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CCC4AC1B1A0AF52D00146537 /* Localizable.strings */; };
+		CCC1C89A1A743A7200435FC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8BBA8919DCBB7900C6156D /* Main.storyboard */; };
+		CCC4AC191A0AF52D00146537 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CCC4AC1B1A0AF52D00146537 /* Localizable.strings */; };
+		CCD222D419E0B8EF0003047B /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD222D319E0B8EF0003047B /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +51,37 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		812762A91B3546BF00461FD3 /* BedtimeCalcViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BedtimeCalcViewController.swift; sourceTree = "<group>"; };
+		8133E77F1B44FC4E00BE82D9 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		8133E7811B46364200BE82D9 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Main.strings; sourceTree = "<group>"; };
+		817BD26C1B3BAFD60069BC69 /* WakeUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WakeUpViewController.swift; sourceTree = "<group>"; };
+		81FD61211B4198D20085E1B2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		81FD61231B421EFC0085E1B2 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		81FD61251B4241110085E1B2 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		CC05E6411AAD1440006FE948 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CC05E6431AAD1FAE006FE948 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CC15EBEC19DE1F7C00E28BB0 /* DreamUpdaterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DreamUpdaterViewController.swift; sourceTree = "<group>"; };
+		CC2285EA19EA676000E26679 /* SetNotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetNotificationViewController.swift; sourceTree = "<group>"; };
+		CC31059C19F2328C00FE94B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CC5D57A31A0C70F80044954C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		CC8BBA7D19DCBB7900C6156D /* DreamNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8BBA8119DCBB7900C6156D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC8BBA8219DCBB7900C6156D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC8BBA8519DCBB7900C6156D /* DreamNotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DreamNotes.xcdatamodel; sourceTree = "<group>"; };
-		CC8BBA8719DCBB7900C6156D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CC8BBA8A19DCBB7900C6156D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CC8BBA8C19DCBB7900C6156D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		CC8BBA8F19DCBB7900C6156D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CC8BBA9519DCBB7900C6156D /* DreamNotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreamNotesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8BBA9A19DCBB7900C6156D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC8BBA9B19DCBB7900C6156D /* DreamNotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamNotesTests.swift; sourceTree = "<group>"; };
+		CC8BBAA519DCBBC900C6156D /* ListaPrincipalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaPrincipalTableViewController.swift; sourceTree = "<group>"; };
+		CC8BBAA719DCBE2B00C6156D /* DreamEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DreamEditorViewController.swift; path = ../DreamEditorViewController.swift; sourceTree = "<group>"; };
+		CC8BBAA919DCC4EC00C6156D /* Dreams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dreams.swift; sourceTree = "<group>"; };
+		CC9097591A412787000CA7FA /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CC98BAF91A5E037900B9A182 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		CCBBBAD91ABFADC100D09CDF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CCC0D11D1A12E9F500C36D8E /* ShareVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareVC.swift; sourceTree = "<group>"; };
+		CCC1C89E1A743A7200435FC6 /* DreamNotesPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamNotesPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCC4AC1A1A0AF52D00146537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CCD222D319E0B8EF0003047B /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				814169161D306C0900230F6B /* AdSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,12 +100,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CCC1C8941A743A7200435FC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCC1C8951A743A7200435FC6 /* AdSupport.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		CC8BBA7419DCBB7900C6156D = {
 			isa = PBXGroup;
 			children = (
+				CC98BAF91A5E037900B9A182 /* AdSupport.framework */,
 				CC8BBA7F19DCBB7900C6156D /* DreamNotes */,
 				CC8BBA9819DCBB7900C6156D /* DreamNotesTests */,
 				CC8BBA7E19DCBB7900C6156D /* Products */,
@@ -72,6 +126,7 @@
 			children = (
 				CC8BBA7D19DCBB7900C6156D /* DreamNotes.app */,
 				CC8BBA9519DCBB7900C6156D /* DreamNotesTests.xctest */,
+				CCC1C89E1A743A7200435FC6 /* DreamNotesPro.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,13 +134,21 @@
 		CC8BBA7F19DCBB7900C6156D /* DreamNotes */ = {
 			isa = PBXGroup;
 			children = (
-				CC8BBA8219DCBB7900C6156D /* AppDelegate.swift */,
-				CC8BBA8719DCBB7900C6156D /* ViewController.swift */,
 				CC8BBA8919DCBB7900C6156D /* Main.storyboard */,
-				CC8BBA8C19DCBB7900C6156D /* Images.xcassets */,
-				CC8BBA8E19DCBB7900C6156D /* LaunchScreen.xib */,
+				CC8BBA8219DCBB7900C6156D /* AppDelegate.swift */,
+				CC8BBAA919DCC4EC00C6156D /* Dreams.swift */,
+				CCD222D319E0B8EF0003047B /* CustomCell.swift */,
+				CC8BBAA519DCBBC900C6156D /* ListaPrincipalTableViewController.swift */,
+				CC8BBAA719DCBE2B00C6156D /* DreamEditorViewController.swift */,
+				CC15EBEC19DE1F7C00E28BB0 /* DreamUpdaterViewController.swift */,
+				CC2285EA19EA676000E26679 /* SetNotificationViewController.swift */,
+				CCC0D11D1A12E9F500C36D8E /* ShareVC.swift */,
+				812762A91B3546BF00461FD3 /* BedtimeCalcViewController.swift */,
+				817BD26C1B3BAFD60069BC69 /* WakeUpViewController.swift */,
+				CC31059C19F2328C00FE94B0 /* Images.xcassets */,
 				CC8BBA8419DCBB7900C6156D /* DreamNotes.xcdatamodeld */,
 				CC8BBA8019DCBB7900C6156D /* Supporting Files */,
+				CCC4AC1B1A0AF52D00146537 /* Localizable.strings */,
 			);
 			path = DreamNotes;
 			sourceTree = "<group>";
@@ -153,21 +216,44 @@
 			productReference = CC8BBA9519DCBB7900C6156D /* DreamNotesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		CCC1C8891A743A7200435FC6 /* DreamNotesPro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCC1C89B1A743A7200435FC6 /* Build configuration list for PBXNativeTarget "DreamNotesPro" */;
+			buildPhases = (
+				CCC1C88A1A743A7200435FC6 /* Sources */,
+				CCC1C8941A743A7200435FC6 /* Frameworks */,
+				CCC1C8971A743A7200435FC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DreamNotesPro;
+			productName = DreamNotes;
+			productReference = CCC1C89E1A743A7200435FC6 /* DreamNotesPro.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		CC8BBA7519DCBB7900C6156D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Baza Inc";
 				TargetAttributes = {
 					CC8BBA7C19DCBB7900C6156D = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = U3R74ZQVJS;
 					};
 					CC8BBA9419DCBB7900C6156D = {
 						CreatedOnToolsVersion = 6.0.1;
 						TestTargetID = CC8BBA7C19DCBB7900C6156D;
+					};
+					CCC1C8891A743A7200435FC6 = {
+						DevelopmentTeam = U3R74ZQVJS;
 					};
 				};
 			};
@@ -178,6 +264,11 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
+				pt,
+				es,
+				fr,
+				de,
 			);
 			mainGroup = CC8BBA7419DCBB7900C6156D;
 			productRefGroup = CC8BBA7E19DCBB7900C6156D /* Products */;
@@ -185,6 +276,7 @@
 			projectRoot = "";
 			targets = (
 				CC8BBA7C19DCBB7900C6156D /* DreamNotes */,
+				CCC1C8891A743A7200435FC6 /* DreamNotesPro */,
 				CC8BBA9419DCBB7900C6156D /* DreamNotesTests */,
 			);
 		};
@@ -195,9 +287,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC31059D19F2328C00FE94B0 /* Images.xcassets in Resources */,
+				CCC4AC191A0AF52D00146537 /* Localizable.strings in Resources */,
 				CC8BBA8B19DCBB7900C6156D /* Main.storyboard in Resources */,
-				CC8BBA9019DCBB7900C6156D /* LaunchScreen.xib in Resources */,
-				CC8BBA8D19DCBB7900C6156D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +300,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CCC1C8971A743A7200435FC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCC1C8981A743A7200435FC6 /* Images.xcassets in Resources */,
+				CCC1C8991A743A7200435FC6 /* Localizable.strings in Resources */,
+				CCC1C89A1A743A7200435FC6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -215,9 +317,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC8BBA8819DCBB7900C6156D /* ViewController.swift in Sources */,
+				CC2285EB19EA676000E26679 /* SetNotificationViewController.swift in Sources */,
 				CC8BBA8319DCBB7900C6156D /* AppDelegate.swift in Sources */,
+				CC8BBAA819DCBE2B00C6156D /* DreamEditorViewController.swift in Sources */,
+				CC15EBED19DE1F7C00E28BB0 /* DreamUpdaterViewController.swift in Sources */,
+				817BD26D1B3BAFD60069BC69 /* WakeUpViewController.swift in Sources */,
+				CCC0D11E1A12E9F500C36D8E /* ShareVC.swift in Sources */,
 				CC8BBA8619DCBB7900C6156D /* DreamNotes.xcdatamodeld in Sources */,
+				CC8BBAA619DCBBC900C6156D /* ListaPrincipalTableViewController.swift in Sources */,
+				CCD222D419E0B8EF0003047B /* CustomCell.swift in Sources */,
+				CC8BBAAA19DCC4EC00C6156D /* Dreams.swift in Sources */,
+				812762AA1B3546BF00461FD3 /* BedtimeCalcViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +336,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC8BBA9C19DCBB7900C6156D /* DreamNotesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCC1C88A1A743A7200435FC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCC1C88B1A743A7200435FC6 /* SetNotificationViewController.swift in Sources */,
+				CCC1C88C1A743A7200435FC6 /* AppDelegate.swift in Sources */,
+				CCC1C88D1A743A7200435FC6 /* DreamEditorViewController.swift in Sources */,
+				CCC1C88E1A743A7200435FC6 /* DreamUpdaterViewController.swift in Sources */,
+				817BD26E1B3BAFD60069BC69 /* WakeUpViewController.swift in Sources */,
+				817BD26A1B3A3D3E0069BC69 /* BedtimeCalcViewController.swift in Sources */,
+				CCC1C88F1A743A7200435FC6 /* ShareVC.swift in Sources */,
+				CCC1C8901A743A7200435FC6 /* DreamNotes.xcdatamodeld in Sources */,
+				CCC1C8911A743A7200435FC6 /* ListaPrincipalTableViewController.swift in Sources */,
+				CCC1C8921A743A7200435FC6 /* CustomCell.swift in Sources */,
+				CCC1C8931A743A7200435FC6 /* Dreams.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,16 +372,26 @@
 			isa = PBXVariantGroup;
 			children = (
 				CC8BBA8A19DCBB7900C6156D /* Base */,
+				81FD61211B4198D20085E1B2 /* de */,
+				81FD61231B421EFC0085E1B2 /* fr */,
+				81FD61251B4241110085E1B2 /* es */,
+				8133E77F1B44FC4E00BE82D9 /* pt-BR */,
+				8133E7811B46364200BE82D9 /* pt */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		CC8BBA8E19DCBB7900C6156D /* LaunchScreen.xib */ = {
+		CCC4AC1B1A0AF52D00146537 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CC8BBA8F19DCBB7900C6156D /* Base */,
+				CCC4AC1A1A0AF52D00146537 /* Base */,
+				CC5D57A31A0C70F80044954C /* pt-BR */,
+				CC9097591A412787000CA7FA /* pt */,
+				CC05E6411AAD1440006FE948 /* es */,
+				CC05E6431AAD1FAE006FE948 /* fr */,
+				CCBBBAD91ABFADC100D09CDF /* de */,
 			);
-			name = LaunchScreen.xib;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -293,7 +431,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				INFOPLIST_FILE = "DreamNotes-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -329,7 +468,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				INFOPLIST_FILE = "DreamNotes-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -339,20 +479,40 @@
 		CC8BBAA019DCBB7900C6156D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconPro;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = DreamNotes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		CC8BBAA119DCBB7900C6156D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconPro;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = DreamNotes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -390,6 +550,50 @@
 			};
 			name = Release;
 		};
+		CCC1C89C1A743A7200435FC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconPro;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Bart/Documents/iOS/FacebookSDK,
+				);
+				INFOPLIST_FILE = DreamNotes/ProInfo.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D LITE";
+				PRODUCT_NAME = DreamNotesPro;
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CCC1C89D1A743A7200435FC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconPro;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Bart/Documents/iOS/FacebookSDK,
+				);
+				INFOPLIST_FILE = DreamNotes/ProInfo.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D LITE";
+				PRODUCT_NAME = DreamNotesPro;
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -409,6 +613,7 @@
 				CC8BBAA119DCBB7900C6156D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC8BBAA219DCBB7900C6156D /* Build configuration list for PBXNativeTarget "DreamNotesTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +622,16 @@
 				CC8BBAA419DCBB7900C6156D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCC1C89B1A743A7200435FC6 /* Build configuration list for PBXNativeTarget "DreamNotesPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCC1C89C1A743A7200435FC6 /* Debug */,
+				CCC1C89D1A743A7200435FC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

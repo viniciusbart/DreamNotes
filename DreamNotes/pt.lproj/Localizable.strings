@@ -1,0 +1,31 @@
+/* 
+  Localizable.strings
+  DreamNotes
+
+  Created by Vinícius Bazanelli on 05/11/14.
+  Copyright (c) 2014 Baza Inc. All rights reserved.
+*/
+
+"Notification" = "Você sonhou hoje?";
+"No" = "Não";
+"Note" = "Anotar";
+"Body" = "Me conte seu sonho...";
+"Ntf_title" = "Aviso";
+"Ntf_msg" = "Notificação Lembrete definida para: ";
+"Ntf_msg_daily" = " diariamente.";
+"Write" = "\nEscrito em ";
+"Alert_title" = "Aviso!";
+"Alert_msg" = "Insira texto para seu sonho...";
+"Rate_us_title" = "Avalie-nos";
+"Rate_us_msg" = "Obrigado por usar Dream Notes\nEsperamos que você tenha bons sonhos";
+"No-thx" = "Não, obrigado";
+"Maybe" = "Depois";
+"Rate" = "Avalie Dream Notes!";
+"Pro_title" = "Versão Pro Necessária";
+"Pro_msg" = "Você não esta usando a versão Dream Notes Pro, este recurso esta indiponível";
+"Buy_pro_title" = "Dream Notes Pro";
+"Buy_pro_msg" = "Desbloqueie notificações diárias e se livre da propaganda com a versão Dream Notes Pro";
+"Buy" = "Comprar";
+"Not_using" = "⚠️Você não está usando a versão Dream Notes Pro⚠️";
+"Not_using2" = "⚠️ Oops, este é um recurso pago desculpe ⚠️";
+"I_think" = "Eu acho que você deve fazer as nuvens felizes e dar uma olhada em nós na App Store ❍ᴥ❍";

@@ -1,0 +1,96 @@
+
+/* Class = "UITabBarItem"; title = "Dreams"; ObjectID = "6B7-4Y-CRo"; */
+"6B7-4Y-CRo.title" = "Sonhos";
+
+/* Class = "UITextField"; text = "Data goes here"; ObjectID = "8XT-lt-ZS0"; */
+"8XT-lt-ZS0.text" = "Data goes here";
+
+/* Class = "UILabel"; text = "You should fall asleep at the following times:"; ObjectID = "9TW-6W-jkT"; */
+"ut6-yD-8lf.text" = "Você deve adormecer nos seguintes horários:";
+
+/* Class = "UILabel"; text = "I have to wake up at:"; ObjectID = "EN2-YA-lPZ"; */
+"EN2-YA-lPZ.text" = "Eu tenho que acordar às:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "EzG-MS-QZB"; */
+"EzG-MS-QZB.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Gqd-fY-Bhv"; */
+"Gqd-fY-Bhv.text" = "Label";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "JSZ-98-pmO"; */
+"JSZ-98-pmO.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "L9X-dP-zFQ"; */
+"L9X-dP-zFQ.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "MWu-ml-7bh"; */
+"MWu-ml-7bh.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Schedule"; ObjectID = "N1G-5w-RVw"; */
+"N1G-5w-RVw.normalTitle" = "Agendar";
+
+/* Class = "UINavigationItem"; title = "Dream Updater"; ObjectID = "Nhc-gR-EDz"; */
+"Nhc-gR-EDz.title" = "Dream Updater";
+
+/* Class = "UILabel"; text = "When will i wake up?"; ObjectID = "OTI-CQ-zwY"; */
+"OTI-CQ-zwY.text" = "Quando vou acordar?";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Rzm-bw-OtZ"; */
+"Rzm-bw-OtZ.text" = "Label";
+
+/* Class = "UILabel"; text = "You should set up your alarm for the following times:"; ObjectID = "TdZ-Pq-QbS"; */
+"TdZ-Pq-QbS.text" = "Você deve configurar seu alarme para os seguintes horários:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "XfJ-ZX-JBm"; */
+"XfJ-ZX-JBm.text" = "Label";
+
+/* Class = "UILabel"; text = "Set Notifications Reminders"; ObjectID = "bCF-sM-Voy"; */
+"bCF-sM-Voy.text" = "Agendar Notificação Lembrete";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "bjb-Le-uqK"; */
+"bjb-Le-uqK.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Bedtime"; ObjectID = "fS4-gh-u4B"; */
+"fS4-gh-u4B.title" = "Hora de Dormir";
+
+/* Class = "UILabel"; text = "The average adult human takes 40 mins to fall asleep, so plan accordingly!\nSleep cycles typically last 90 minutes.\nWaking up in the middle of a sleep cycle leaves you feeling tired and groggy, but waking up in between cycles lets you wake up feeling refreshed and alert!"; ObjectID = "hOv-DR-Iuf"; */
+"hOv-DR-Iuf.text" = "Em média o ser humano adulto leva 40 mins para adormecer, portanto planeje adequadamente!\nCiclos de sono geralmente duram 90 mins.\nAcordar no meio de um ciclo de sono deixa você sentindo-se cansado e grogue, mas acordar entre os ciclos permite que você acorde sentindo-se revigorado e alerta!";
+
+/* Class = "UILabel"; text = "Daily"; ObjectID = "iwI-Gf-lhi"; */
+"iwI-Gf-lhi.text" = "Diariamente";
+
+/* Class = "UITabBarItem"; title = "Dreams"; ObjectID = "lST-Sd-K4q"; */
+"lST-Sd-K4q.title" = "Sonhos";
+
+/* Class = "UINavigationItem"; title = "Dream Editor"; ObjectID = "lV3-jj-gOv"; */
+"lV3-jj-gOv.title" = "Dream Editor";
+
+/* Class = "UINavigationItem"; title = "Dream Notes"; ObjectID = "oOk-Sl-s3A"; */
+"oOk-Sl-s3A.title" = "Dream Notes";
+
+/* Class = "UILabel"; text = "The average adult human takes 40 mins to fall asleep.\nYou should try to wake up at one of the above times.\n5 - 6 Sleep cycles is needed for a good night sleep.\nSleep cycles typically last 90 mins. "; ObjectID = "qb3-8y-Tdn"; */
+"qb3-8y-Tdn.text" = "Em média o ser humano adulto leva 40 mins para adormecer.\nVocê deve tentar acordar em um dos tempos acima.\n5 - 6 Ciclos de sono são necessários para uma boa noite de sono.\nCiclos de sono geralmente duram 90 mins.";
+
+/* Class = "UIButton"; normalTitle = "Now"; ObjectID = "qcs-Lh-KSG"; */
+"qcs-Lh-KSG.normalTitle" = "Agora";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "qph-lv-cV7"; */
+"qph-lv-cV7.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Wake Up Time"; ObjectID = "t27-71-Qul"; */
+"pVD-i2-MHz.title" = "Hora de Acordar";
+
+/* Class = "UILabel"; text = "if i go to bed"; ObjectID = "uXl-Cs-lB1"; */
+"uXl-Cs-lB1.text" = "se eu for pra cama";
+
+/* Class = "UIButton"; normalTitle = "Calculate"; ObjectID = "xEm-Ic-Mv8"; */
+"xEm-Ic-Mv8.normalTitle" = "Calcular";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "yUt-EL-FTM"; */
+"yUt-EL-FTM.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ygI-Qa-PgZ"; */
+"ygI-Qa-PgZ.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "z7z-hN-uVH"; */
+"z7z-hN-uVH.text" = "Label";

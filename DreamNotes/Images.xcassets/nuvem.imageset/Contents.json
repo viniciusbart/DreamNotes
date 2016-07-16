@@ -1,0 +1,39 @@
+{
+  "images" : [
+    {
+      "idiom" : "iphone",
+      "scale" : "1x",
+      "filename" : "tvbg320x480_1x_Fotor.jpg"
+    },
+    {
+      "idiom" : "iphone",
+      "scale" : "2x",
+      "filename" : "tvbg640x960_2x_Fotor.jpg"
+    },
+    {
+      "idiom" : "iphone",
+      "filename" : "tvbg640x1136_2x_Fotor.jpg",
+      "subtype" : "retina4",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "iphone",
+      "scale" : "3x",
+      "filename" : "tvbg1242x2207_3x_Fotor.png"
+    },
+    {
+      "idiom" : "ipad",
+      "scale" : "1x",
+      "filename" : "ipad_tvbg768x1024_1x_Fotor.jpg"
+    },
+    {
+      "idiom" : "ipad",
+      "scale" : "2x",
+      "filename" : "ipad_tvbg1536x2048_2x_Fotor.jpg"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
