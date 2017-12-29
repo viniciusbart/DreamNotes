@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import iAd
 
-class BedtimeCalcViewController: UIViewController, UITabBarDelegate, ADBannerViewDelegate {
+class BedtimeCalcViewController: UIViewController, UITabBarDelegate {
     
     @IBOutlet weak var dtPicker: UIDatePicker!
     @IBOutlet weak var btCalculate: UIButton!
@@ -21,112 +20,76 @@ class BedtimeCalcViewController: UIViewController, UITabBarDelegate, ADBannerVie
     @IBOutlet weak var lbltitle: UILabel!
     @IBOutlet weak var lblHead: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
-    var bannerView: ADBannerView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        #if LITE
-            self.view.backgroundColor = UIColor(patternImage: UIImage(named: "nuvens-tristes.png")!)
-            self.canDisplayBannerAds = true
-            self.bannerView?.delegate = self
-            self.bannerView?.hidden = true
-        #else
-            self.view.backgroundColor = UIColor(patternImage: UIImage(named: "swirl_pattern.png")!)
-        #endif
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "swirl_pattern.png")!)
+        
+        let attrs = [
+            NSAttributedStringKey.foregroundColor: UIColor.white,
+            NSAttributedStringKey.font: UIFont(name: "Chalkduster", size: 24)!
+        ]
+        UINavigationBar.appearance().titleTextAttributes = attrs
     }
     
-    override func viewWillAppear(animated: Bool) {
-        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.Default, animated: true)
-        #if LITE
-            ModoFree()
-        #else
-            ModoInicial()
-        #endif
+    override func viewWillAppear(_ animated: Bool) {
+        UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.default, animated: true)
+        ModoInicial()
     }
     
-    // Banner iAd
-    func bannerViewDidLoadAd(banner: ADBannerView!) {
-        self.bannerView?.hidden = false
-    }
-    
-    func bannerViewActionShouldBegin(banner: ADBannerView!, willLeaveApplication willLeave: Bool) -> Bool {
-        return willLeave
-    }
-    
-    func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
-        self.bannerView?.hidden = true
-    }
-    // **********
-    
-    
-    @IBAction func calculate(sender: AnyObject) {
+    @IBAction func calculate(_ sender: AnyObject) {
         let dtTime = dtPicker.date
         CalcularHoras(dtTime)
     }
     
-    
     func ModoInicial() {
         scrollView.contentOffset.x = 0
         scrollView.contentOffset.y = 0
-        lblHead.hidden = false
-        dtPicker.hidden = false
-        btCalculate.hidden = false
-        lblTime1.hidden = true
-        lblTime2.hidden = true
-        lblTime3.hidden = true
-        lblTime4.hidden = true
-        lbltitle.hidden = true
-        lblInfo.hidden = true
+        lblHead.isHidden = false
+        dtPicker.isHidden = false
+        btCalculate.isHidden = false
+        lblTime1.isHidden = true
+        lblTime2.isHidden = true
+        lblTime3.isHidden = true
+        lblTime4.isHidden = true
+        lbltitle.isHidden = true
+        lblInfo.isHidden = true
         lblHead.font = UIFont(name: "Chalkduster", size: 16.0)
     }
     
     func ModoExibicao() {
-        lbltitle.hidden = false
-        lblTime1.hidden = false
-        lblTime2.hidden = false
-        lblTime3.hidden = false
-        lblTime4.hidden = false
-        lblInfo.hidden = false
+        lbltitle.isHidden = false
+        lblTime1.isHidden = false
+        lblTime2.isHidden = false
+        lblTime3.isHidden = false
+        lblTime4.isHidden = false
+        lblInfo.isHidden = false
     }
     
-    func ModoFree() {
-        dtPicker.hidden = true
-        btCalculate.hidden = true
-        lblTime1.hidden = true
-        lblTime2.hidden = true
-        lblTime3.hidden = true
-        lblTime4.hidden = true
-        lblHead.hidden = true
-        lblInfo.hidden = true
-        lbltitle.text = NSLocalizedString("Not_using", comment: "⚠️You are not using Dream Notes Pro version⚠️")
-        lbltitle.font = UIFont(name: "Chalkduster", size: 11.5)
-    }
-    
-    func CalcularHoras(tempo: NSDate) {
+    func CalcularHoras(_ tempo: Date) {
         
-        let calendar = NSCalendar.autoupdatingCurrentCalendar()
-        let dateFormatter = NSDateFormatter()
-        let timeFormat = NSDateFormatterStyle.ShortStyle
+        let calendar = Calendar.autoupdatingCurrent
+        let dateFormatter = DateFormatter()
+        let timeFormat = DateFormatter.Style.short
         dateFormatter.timeStyle = timeFormat
         
-        let newdate4 = calendar.dateByAddingUnit(NSCalendarUnit.Minute, value: -270, toDate: tempo, options: NSCalendarOptions.SearchBackwards)!
-        //let newdate4 = calendar.dateByAddingUnit(NSCalendarUnit.Minute, value: -270, toDate: tempo, options: NSCalendarOptions.WrapComponents)!
-        let tempo4 = dateFormatter.stringFromDate(newdate4)
+        let newdate4 = (calendar as NSCalendar).date(byAdding: NSCalendar.Unit.minute, value: -270, to: tempo, options: NSCalendar.Options.searchBackwards)!
+        let tempo4 = dateFormatter.string(from: newdate4)
         lblTime4.text = tempo4
         lblTime4.backgroundColor = UIColor(red: 0xFF/255, green: 0xE1/255, blue: 0x1A/255, alpha: 1.0)
         
-        let newdate3 = calendar.dateByAddingUnit(NSCalendarUnit.Minute, value: -360, toDate: tempo, options: NSCalendarOptions.SearchBackwards)!
-        let tempo3 = dateFormatter.stringFromDate(newdate3)
+        let newdate3 = (calendar as NSCalendar).date(byAdding: NSCalendar.Unit.minute, value: -360, to: tempo, options: NSCalendar.Options.searchBackwards)!
+        let tempo3 = dateFormatter.string(from: newdate3)
         lblTime3.text = tempo3
         lblTime3.backgroundColor = UIColor(red: 0xbd/255, green: 0xd4/255, blue: 0x13/255, alpha: 1.0)
         
-        let newdate2 = calendar.dateByAddingUnit(NSCalendarUnit.Minute, value: -450, toDate: tempo, options: NSCalendarOptions.SearchBackwards)!
-        let tempo2 = dateFormatter.stringFromDate(newdate2)
+        let newdate2 = (calendar as NSCalendar).date(byAdding: NSCalendar.Unit.minute, value: -450, to: tempo, options: NSCalendar.Options.searchBackwards)!
+        let tempo2 = dateFormatter.string(from: newdate2)
         lblTime2.text = tempo2
         lblTime2.backgroundColor = UIColor(red: 0x4f/255, green: 0xd4/255, blue: 0x4c/255, alpha: 1.0)
         
-        let newdate1 = calendar.dateByAddingUnit(NSCalendarUnit.Minute, value: -540, toDate: tempo, options: NSCalendarOptions.SearchBackwards)!
-        let tempo1 = dateFormatter.stringFromDate(newdate1)
+        let newdate1 = (calendar as NSCalendar).date(byAdding: NSCalendar.Unit.minute, value: -540, to: tempo, options: NSCalendar.Options.searchBackwards)!
+        let tempo1 = dateFormatter.string(from: newdate1)
         lblTime1.text = tempo1
         lblTime1.backgroundColor = UIColor(red: 0x4c/255, green: 0x8c/255, blue: 0x0d/255, alpha: 1.0)
         
@@ -137,16 +100,5 @@ class BedtimeCalcViewController: UIViewController, UITabBarDelegate, ADBannerVie
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
     
 }

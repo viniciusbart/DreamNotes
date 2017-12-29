@@ -8,120 +8,91 @@
 
 import UIKit
 import CoreData
-import iAd
 
-class ListaPrincipalTableViewController: UITableViewController, NSFetchedResultsControllerDelegate, ADBannerViewDelegate{
+class ListaPrincipalTableViewController: UITableViewController, NSFetchedResultsControllerDelegate{
     
-    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     var iMinSessions = 3
     var iTryAgainSessions = 6
-    var fetchedResultController: NSFetchedResultsController = NSFetchedResultsController()
-    var bannerView: ADBannerView?
     var dream: Dreams? = nil
+    let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
+    var fetchedResultController: NSFetchedResultsController<NSFetchRequestResult> = NSFetchedResultsController()
     
     @IBOutlet weak var configBtnItem: UIBarButtonItem!
     @IBOutlet var myTableView: UITableView!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        #if LITE
-            // iAd
-            self.canDisplayBannerAds = true
-            self.bannerView?.delegate = self
-            self.bannerView?.hidden = true
-        #endif
-        
-        // ----- iOS Version -----
-        func SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(version: NSString) -> Bool {
-            return UIDevice.currentDevice().systemVersion.compare(version as String,
-                options: NSStringCompareOptions.NumericSearch) != NSComparisonResult.OrderedAscending
-        }
+            super.viewDidLoad()
         
         // STYLE
         //let settingsImg: UIImage = UIImage(named: "Settings")!
         //configBtnItem.setBackgroundImage(settingsImg, forState: .Normal, barMetrics: .Default)
         self.navigationController?.navigationBar.titleTextAttributes = [
-            NSFontAttributeName: UIFont(name: "Chalkduster", size: 24.0)!,
-            NSForegroundColorAttributeName: UIColor(red: 255, green:255, blue: 255, alpha: 1)
+            NSAttributedStringKey.font: UIFont(name: "Chalkduster", size: 24.0)!,
+            NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0)
         ]
-        self.tableView.backgroundView = UIImageView(image: UIImage(named: "nuvem"))
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "night-sky-stars"))
+        
         //receive notifications when the preferred content size changes
-        NSNotificationCenter.defaultCenter().addObserver(self,
-            selector: "preferredContentSizeChanged:",
-            name: UIContentSizeCategoryDidChangeNotification,
-            object: nil)
+        NotificationCenter.default.addObserver(self,
+                                                         selector: "preferredContentSizeChanged:",
+                                                         name: NSNotification.Name.UIContentSizeCategoryDidChange,
+                                                         object: nil)
         
         //Set Notifications Observers
-        NSNotificationCenter.defaultCenter().addObserver(self,
-            selector:"makeALog:",
-            name: "actionNoPressed",
-            object: nil)
+        NotificationCenter.default.addObserver(self,
+                                                         selector:"makeALog:",
+                                                         name: NSNotification.Name(rawValue: "actionNoPressed"),
+                                                         object: nil)
         
-        NSNotificationCenter.defaultCenter().addObserver(self,
-            selector:"redirectToEditor:",
-            name: "actionNotePressed",
-            object: nil)
+        NotificationCenter.default.addObserver(self,
+                                                         selector:"redirectToEditor:",
+                                                         name: NSNotification.Name(rawValue: "actionNotePressed"),
+                                                         object: nil)
         
         fetchedResultController = getFetchedResultController()
         fetchedResultController.delegate = self
         do {
             try fetchedResultController.performFetch()
         }catch{
-            "deu merda: \(error)"
+            NSLog("deu merda: \(error)")
+            fatalError("Failed to fetch entities: \(error)")
         }
         
-        if SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO("8"){
-            rateMe()
-        }
-        
+        rateMe()
     }
     
-    override func viewWillAppear(animated: Bool) {
-        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+    override func viewWillAppear(_ animated: Bool) {
+        UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.lightContent, animated: true)
     }
-    
-    #if LITE
-    func bannerViewDidLoadAd(banner: ADBannerView!) {
-    self.bannerView?.hidden = false
-    }
-    
-    func bannerViewActionShouldBegin(banner: ADBannerView!, willLeaveApplication willLeave: Bool) -> Bool {
-    return willLeave
-    }
-    
-    func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
-    self.bannerView?.hidden = true
-    }
-    #endif
     
     func rateMe() {
-        let neverRate = NSUserDefaults.standardUserDefaults().boolForKey("neverRate")
-        var numLaunches = NSUserDefaults.standardUserDefaults().integerForKey("numLaunches") + 1
+        let neverRate = UserDefaults.standard.bool(forKey: "neverRate")
+        var numLaunches = UserDefaults.standard.integer(forKey: "numLaunches") + 1
         
         if (!neverRate && (numLaunches == iMinSessions || numLaunches >= (iMinSessions + iTryAgainSessions + 1)))
         {
             showRateMe()
             numLaunches = iMinSessions + 1
         }
-        NSUserDefaults.standardUserDefaults().setInteger(numLaunches, forKey: "numLaunches")
+        UserDefaults.standard.set(numLaunches, forKey: "numLaunches")
     }
     
     func showRateMe() {
-        let alert = UIAlertController(title: NSLocalizedString("Rate_us_title", comment: "Rate Us"), message: NSLocalizedString("Rate_us_msg", comment: "Thanks for using Dream Notes\nWe hope you have sweet dreams"), preferredStyle: UIAlertControllerStyle.Alert)
+        let alert = UIAlertController(title: NSLocalizedString("Rate_us_title", comment: "Rate Us"), message: NSLocalizedString("Rate_us_msg", comment: "Thanks for using Dream Notes\nWe hope you have sweet dreams"), preferredStyle: UIAlertControllerStyle.alert)
         
-        alert.addAction(UIAlertAction(title: NSLocalizedString("No-thx", comment: "No Thanks"), style: UIAlertActionStyle.Default, handler: {
+        alert.addAction(UIAlertAction(title: NSLocalizedString("No-thx", comment: "No Thanks"), style: UIAlertActionStyle.default, handler: {
             alertAction in
-            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "neverRate")
-            alert.dismissViewControllerAnimated(true, completion: nil)
+            UserDefaults.standard.set(true, forKey: "neverRate")
+            alert.dismiss(animated: true, completion: nil)
         }))
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Maybe", comment: "Maybe Later"), style: UIAlertActionStyle.Default, handler: { alertAction in
-            alert.dismissViewControllerAnimated(true, completion: nil)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Maybe", comment: "Maybe Later"), style: UIAlertActionStyle.default, handler: { alertAction in
+            alert.dismiss(animated: true, completion: nil)
         }))
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Rate", comment: "Rate Dream Notes!"), style: UIAlertActionStyle.Default, handler: { alertAction in
-            UIApplication.sharedApplication().openURL(NSURL(string : "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=949218227&pageNumber=0&sortOrdering=1&type=Purple+Software&mt=8")!)
-            alert.dismissViewControllerAnimated(true, completion: nil)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Rate", comment: "Rate Dream Notes!"), style: UIAlertActionStyle.default, handler: { alertAction in
+            UIApplication.shared.openURL(NSURL(string : "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=949218227&pageNumber=0&sortOrdering=1&type=Purple+Software&mt=8")! as URL)
+            alert.dismiss(animated: true, completion: nil)
         }))
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
     
     func makeALog(notification:NSNotification){
@@ -134,11 +105,11 @@ class ListaPrincipalTableViewController: UITableViewController, NSFetchedResults
         print("Note - Pressed")
         
         //Redirect to DreamEditorViewController when Notification is pressed
-        self.performSegueWithIdentifier("create", sender: self)
+        self.performSegue(withIdentifier: "create", sender: self)
         
         func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
             if segue.identifier == "create" {
-                let de = segue.destinationViewController as! DreamEditorViewController
+                _ = segue.destination as! DreamEditorViewController
             }
         }
     }
@@ -147,29 +118,27 @@ class ListaPrincipalTableViewController: UITableViewController, NSFetchedResults
         tableView.reloadData()
     }
     
-    override func prepareForSegue(segue: (UIStoryboardSegue!), sender: AnyObject!) {
-        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "edit" {
             let cell = sender as! UITableViewCell
-            let indexPath = tableView.indexPathForCell(cell)
-            let dreamController:DreamUpdaterViewController = segue.destinationViewController as! DreamUpdaterViewController
-            let dream:Dreams = fetchedResultController.objectAtIndexPath(indexPath!) as! Dreams
+            let indexPath = tableView.indexPath(for: cell)
+            let dreamController:DreamUpdaterViewController = segue.destination as! DreamUpdaterViewController
+            let dream:Dreams = fetchedResultController.object(at: indexPath!) as! Dreams
             dreamController.dream = dream
         }
         
         if segue.identifier == "config"{
-            let settings:SetNotificationViewController = segue.destinationViewController as! SetNotificationViewController
+            let _:SetNotificationViewController = segue.destination as! SetNotificationViewController
         }
     }
     
-    
-    func getFetchedResultController() -> NSFetchedResultsController {
-        fetchedResultController = NSFetchedResultsController(fetchRequest: taskFetchRequest(), managedObjectContext: managedObjectContext!, sectionNameKeyPath: nil, cacheName: nil)
+    func getFetchedResultController() -> NSFetchedResultsController<NSFetchRequestResult> {
+        fetchedResultController = NSFetchedResultsController(fetchRequest: taskFetchRequest() , managedObjectContext: managedObjectContext!, sectionNameKeyPath: nil, cacheName: nil)
         return fetchedResultController
     }
     
-    func taskFetchRequest() -> NSFetchRequest {
-        let fetchRequest = NSFetchRequest(entityName: "Dreams")
+    func taskFetchRequest() -> NSFetchRequest<NSFetchRequestResult> {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Dreams")
         let sortDescriptor = NSSortDescriptor(key: "timestamp", ascending: false)
         fetchRequest.sortDescriptors = [sortDescriptor]
         return fetchRequest
@@ -182,28 +151,25 @@ class ListaPrincipalTableViewController: UITableViewController, NSFetchedResults
     
     // MARK: - Table view data source
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        var numberOfSections = fetchedResultController.sections?.count
-        // porquice para o iOS7.1
-        if numberOfSections == nil {
-            numberOfSections = 0;
-        }
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        let numberOfSections = fetchedResultController.sections?.count
         return numberOfSections!
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let numberOfRowsInSection = fetchedResultController.sections?[section].numberOfObjects
         return numberOfRowsInSection!
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: CustomCell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! CustomCell
-        let dream = fetchedResultController.objectAtIndexPath(indexPath) as! Dreams
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: CustomCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomCell
+        let dream = fetchedResultController.object(at: indexPath as IndexPath) as! Dreams
+        
         
         if(indexPath.row % 2 == 0) {
-            cell.backgroundColor = UIColor.clearColor()
+            cell.backgroundColor = UIColor.clear
         }else{
-            cell.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.3)
+            cell.backgroundColor = UIColor.white.withAlphaComponent(0.1)
             //cell.textLabel.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.0)
         }
         
@@ -214,9 +180,9 @@ class ListaPrincipalTableViewController: UITableViewController, NSFetchedResults
     }
     
     //Delete
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        let managedObject:NSManagedObject = fetchedResultController.objectAtIndexPath(indexPath) as! NSManagedObject
-        managedObjectContext?.deleteObject(managedObject)
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        let managedObject:NSManagedObject = fetchedResultController.object(at: indexPath as IndexPath) as! NSManagedObject
+        managedObjectContext?.delete(managedObject)
         do{
             try managedObjectContext?.save()
         }catch{
@@ -224,7 +190,7 @@ class ListaPrincipalTableViewController: UITableViewController, NSFetchedResults
         }
     }
     
-    func controllerDidChangeContent(controller: NSFetchedResultsController) {
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.reloadData()
     }
 }

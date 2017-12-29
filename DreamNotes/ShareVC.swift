@@ -19,16 +19,16 @@ class ShareVC: UIViewController, ADBannerViewDelegate {
         
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "catcher")!)
         
-        let backBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action:"goHome" )
-        navigationItem.setLeftBarButtonItem(backBarButtonItem, animated: true)
+        let backBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action:#selector(ShareVC.goHome) )
+        navigationItem.setLeftBarButton(backBarButtonItem, animated: true)
         
         let firstActivityItem = texto + NSLocalizedString("Write", comment: "\nWritten on ") + data + "\nDream Notes App ✏️📓💭 #DreamNotes"
         let activityViewController: UIActivityViewController = UIActivityViewController(activityItems: [firstActivityItem], applicationActivities: nil)
-        self.presentViewController(activityViewController, animated: true, completion: nil)
+        self.present(activityViewController, animated: true, completion: nil)
     }
     
-    func goHome() {
-        navigationController?.popViewControllerAnimated(true)
+    @objc func goHome() {
+        navigationController?.popViewController(animated: true)
     }
     
     override func didReceiveMemoryWarning() {
