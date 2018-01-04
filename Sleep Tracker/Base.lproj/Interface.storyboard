@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Sleep_Tracker" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="Force Touch to begin" id="qEh-34-OUo" userLabel="lblTitle"/>
+                        <label alignment="left" text="Movements" id="XaB-JO-1Uf"/>
+                        <label alignment="left" text="lblCount" id="WGT-rG-1oz" userLabel="lblCount">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                    </items>
+                    <menu key="menu" id="uh4-iR-XzX">
+                        <items>
+                            <menuItem title="Strat Tracker" icon="play" id="FRe-No-o0O">
+                                <connections>
+                                    <action selector="start" destination="AgC-eL-Hgc" id="x2y-Yb-ibU"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Stop Tracker" icon="decline" id="hDc-vg-lNT" userLabel="Stop Tracker">
+                                <connections>
+                                    <action selector="stop" destination="AgC-eL-Hgc" id="jVs-9E-4Fy"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="lblCount" destination="WGT-rG-1oz" id="E4H-Nz-sr2"/>
+                        <outlet property="lblTitle" destination="qEh-34-OUo" id="F4S-aP-3VU"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>
