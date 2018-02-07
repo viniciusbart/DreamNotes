@@ -16,6 +16,8 @@ import HealthKit
  */
 protocol TrackerManagerDelegate: class {
     func didUpdateMovementsCount(_ manager: TrackerManager, value: Int)
+    func updateStatus(_ str: String)
+    func didEncounterAuthorizationError(_ manager: TrackerManager)
 }
 
 class TrackerManager: MotionManagerDelegate {
@@ -74,5 +76,17 @@ class TrackerManager: MotionManagerDelegate {
     
     func didUpdateMovementsCount(_ manager: MotionManager, count: Int) {
         delegate?.didUpdateMovementsCount(self, value: count)
+    }
+    
+    func lowIntensityContextStarted(_ manager: MotionManager) {
+        delegate?.updateStatus("low")
+    }
+    
+    func mediumIntensityContextStarted(_ manager: MotionManager) {
+        delegate?.updateStatus("med")
+    }
+    
+    func didEncounterAuthorizationError(_ manager: MotionManager) {
+        delegate?.didEncounterAuthorizationError(self)
     }
 }

@@ -2,7 +2,7 @@
 //  ExtensionDelegate.swift
 //  Sleep Tracker Extension
 //
-//  Created by Vinícius Bazanelli on 03/01/18.
+//  Created by Vinícius Bazanelli on 06/02/18.
 //  Copyright © 2018 Baza Inc. All rights reserved.
 //
 

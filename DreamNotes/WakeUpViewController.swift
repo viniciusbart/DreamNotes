@@ -23,6 +23,12 @@ class WakeUpViewController: UIViewController, UITabBarDelegate {
     
     override func viewDidLoad() {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "arches.png")!)
+        
+        let attrs = [
+            NSAttributedStringKey.foregroundColor: UIColor.white,
+            NSAttributedStringKey.font: UIFont(name: "Chalkduster", size: 24)!
+        ]
+        UINavigationBar.appearance().titleTextAttributes = attrs
     }
     
     override func viewWillAppear(_ animated: Bool) {

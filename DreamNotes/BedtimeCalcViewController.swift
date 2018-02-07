@@ -33,7 +33,7 @@ class BedtimeCalcViewController: UIViewController, UITabBarDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.default, animated: true)
+        //UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.default, animated: true)
         ModoInicial()
     }
     

@@ -14,32 +14,64 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Sleep_Tracker" customModuleProvider="target">
                     <items>
-                        <label alignment="left" text="Force Touch to begin" id="qEh-34-OUo" userLabel="lblTitle"/>
-                        <label alignment="left" text="Movements" id="XaB-JO-1Uf"/>
-                        <label alignment="left" text="lblCount" id="WGT-rG-1oz" userLabel="lblCount">
+                        <label width="136" alignment="left" text="Force Touch to begin" textAlignment="center" numberOfLines="2" id="lew-WR-b3Z" userLabel="lblTitle">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                        </label>
+                        <label width="136" alignment="left" text="Label" id="w4L-xF-XWn" userLabel="lblCount">
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
+                        <label width="136" alignment="left" text=" " id="IpB-IZ-te2" userLabel="lblStatus">
+                            <fontDescription key="font" type="italicSystem" pointSize="16"/>
+                        </label>
+                        <label width="136" alignment="left" text="Speciall thanks to Sean ❤️" textAlignment="center" numberOfLines="0" id="ZwY-A5-iVf" userLabel="lblSpecial">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
                     </items>
-                    <menu key="menu" id="uh4-iR-XzX">
+                    <menu key="menu" id="eQK-gp-iga">
                         <items>
-                            <menuItem title="Strat Tracker" icon="play" id="FRe-No-o0O">
+                            <menuItem title="Start Tracker" icon="accept" id="Hew-xi-SNW">
                                 <connections>
-                                    <action selector="start" destination="AgC-eL-Hgc" id="x2y-Yb-ibU"/>
+                                    <action selector="start" destination="AgC-eL-Hgc" id="KuG-4w-tHU"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Stop Tracker" icon="decline" id="hDc-vg-lNT" userLabel="Stop Tracker">
+                            <menuItem title="Stop Tracker" icon="decline" id="vvd-gm-qj4">
                                 <connections>
-                                    <action selector="stop" destination="AgC-eL-Hgc" id="jVs-9E-4Fy"/>
+                                    <action selector="stop" destination="AgC-eL-Hgc" id="JpU-Kk-y3e"/>
                                 </connections>
                             </menuItem>
                         </items>
                     </menu>
                     <connections>
-                        <outlet property="lblCount" destination="WGT-rG-1oz" id="E4H-Nz-sr2"/>
-                        <outlet property="lblTitle" destination="qEh-34-OUo" id="F4S-aP-3VU"/>
+                        <outlet property="lblCount" destination="w4L-xF-XWn" id="Mwh-SI-z1i"/>
+                        <outlet property="lblStatus" destination="IpB-IZ-te2" id="1ze-rv-f9M"/>
+                        <outlet property="lblTitle" destination="lew-WR-b3Z" id="Ef2-dV-f9a"/>
                     </connections>
                 </controller>
             </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Sleep_Tracker" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
         </scene>
     </scenes>
 </document>
