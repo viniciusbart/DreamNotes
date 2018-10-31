@@ -30,6 +30,16 @@ class BedtimeCalcViewController: UIViewController, UITabBarDelegate {
             NSAttributedStringKey.font: UIFont(name: "Chalkduster", size: 24)!
         ]
         UINavigationBar.appearance().titleTextAttributes = attrs
+        
+        lblHead.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.title1)
+        lbltitle.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.subheadline)
+        lblInfo.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)
+        
+        lblTime1.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.callout)
+        lblTime2.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.callout)
+        lblTime3.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.callout)
+        lblTime4.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.callout)
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {

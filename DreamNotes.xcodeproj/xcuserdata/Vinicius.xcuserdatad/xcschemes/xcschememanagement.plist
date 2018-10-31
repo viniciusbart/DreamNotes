@@ -9,14 +9,14 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>Sleep Tracker.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>816BB829202A7BE100259E01</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>CC8BBA7C19DCBB7900C6156D</key>
 		<dict>
 			<key>primary</key>

@@ -8,19 +8,12 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+@UIApplicationMain class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
-        // ----- iOS Version -----
-        func SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(_ version: NSString) -> Bool {
-            return UIDevice.current.systemVersion.compare(version as String,
-                options: NSString.CompareOptions.numeric) != ComparisonResult.orderedAscending
-        }
         
         // ----- STYLE ------
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
@@ -31,49 +24,58 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // change navigation item title color
         navigationBarAppearace.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
         
-        /* ---------------------------------------------------- */
         
-        if SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO("8"){
-            // Actions
-            let firstAction :UIMutableUserNotificationAction = UIMutableUserNotificationAction()
-            firstAction.identifier = "FIRST_ACTION"
-            firstAction.title = NSLocalizedString("No", comment: "No")
-            firstAction.isDestructive = true
-            firstAction.isAuthenticationRequired = false
-            firstAction.activationMode = UIUserNotificationActivationMode.background
-            
-            let secondAction :UIMutableUserNotificationAction = UIMutableUserNotificationAction()
-            secondAction.identifier = "SECOND_ACTION"
-            secondAction.title = NSLocalizedString("Note", comment: "Note")
-            secondAction.isDestructive = false
-            secondAction.isAuthenticationRequired = false
-            secondAction.activationMode = UIUserNotificationActivationMode.foreground
-            
-            // Category
-            let firstCategory:UIMutableUserNotificationCategory = UIMutableUserNotificationCategory()
-            firstCategory.identifier = "CATEGORY"
-            firstCategory.setActions([firstAction,secondAction], for: UIUserNotificationActionContext.default)
-            firstCategory.setActions([firstAction,secondAction], for: UIUserNotificationActionContext.minimal)
-            
-            application.registerUserNotificationSettings(UIUserNotificationSettings(types: UIUserNotificationType([.sound, .alert, .badge]), categories: (NSSet(array: [firstCategory])) as? Set<UIUserNotificationCategory>))
-            
+        /* ------ NOTIFICATION ------- */
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) {(accepted, error) in
+            if !accepted {
+                print("Notification access denied.")
+            }
         }
+        
+        let firstAction = UNNotificationAction(identifier: "FIRST_ACTION", title: NSLocalizedString("No", comment: "No"), options: .destructive)
+        let secondAction = UNNotificationAction(identifier: "SECOND_ACTION", title: NSLocalizedString("Note", comment: "Note"), options: .foreground)
+        let category = UNNotificationCategory(identifier: "CATEGORY", actions: [firstAction,secondAction], intentIdentifiers: [], options: [])
+        UNUserNotificationCenter.current().setNotificationCategories([category])
         
         return true
     }
     
-    func application(_ application: UIApplication,
-        handleActionWithIdentifier identifier:String?,
-        for notification:UILocalNotification,
-        completionHandler: (@escaping () -> Void)){
+    func scheduleNotification(at date: Date, daily: Bool) {
+        let calendar = Calendar(identifier: .gregorian)
+        let components = calendar.dateComponents(in: .current, from: date)
+        var trigger:UNCalendarNotificationTrigger
+
+        if daily {
+            var newComponents = DateComponents()
+            newComponents.hour = components.hour
+            newComponents.minute = components.minute
             
-            if (identifier == "FIRST_ACTION") {
-                NotificationCenter.default.post(name: Notification.Name(rawValue: "actionNoPressed"), object: nil)
-            } else if (identifier == "SECOND_ACTION") {
-                NotificationCenter.default.post(name: Notification.Name(rawValue: "actionNotePressed"), object: nil)
+            trigger = UNCalendarNotificationTrigger(dateMatching: newComponents, repeats: true)
+        } else {
+            let newComponents = DateComponents(calendar: calendar, timeZone: .current, month: components.month, day: components.day, hour: components.hour, minute: components.minute)
+            
+            trigger = UNCalendarNotificationTrigger(dateMatching: newComponents, repeats: false)
+        }
+        
+        
+        let content = UNMutableNotificationContent()
+        //content.title = "Notification Reminder"
+        content.body = NSLocalizedString("Notification", comment: "Did you dream today?")
+        content.sound = UNNotificationSound.default()
+        content.categoryIdentifier = "CATEGORY"
+        
+        let request = UNNotificationRequest(identifier: "textNotification", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().delegate = self
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        UNUserNotificationCenter.current().add(request) {(error) in
+            if let error = error {
+                print("Uh oh! We had an error: \(error)")
             }
-            completionHandler()
+        }
     }
+    
     
     //Define colors in hex values
     func uicolorFromHex(_ rgbValue:UInt32)->UIColor{
@@ -179,3 +181,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        if (response.actionIdentifier == "FIRST_ACTION") {
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "actionNoPressed"), object: nil)
+        } else if (response.actionIdentifier == "SECOND_ACTION") {
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "actionNotePressed"), object: nil)
+        }
+    }
+}

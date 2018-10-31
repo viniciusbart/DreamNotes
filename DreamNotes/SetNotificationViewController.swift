@@ -17,6 +17,8 @@ class SetNotificationViewController: UIViewController {
     var iMinSessions = 2
     var iTryAgainSessions = 3
     
+    let delegate = UIApplication.shared.delegate as? AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,14 +29,10 @@ class SetNotificationViewController: UIViewController {
     @IBAction func scheduleButton(_ sender: UIButton) {
         
         //Set Notification
-        UIApplication.shared.cancelAllLocalNotifications()
         let dateTime = datePicker.date
-        var notification:UILocalNotification = UILocalNotification()
-        notification.category = "CATEGORY"
-        notification.alertBody = NSLocalizedString("Notification", comment: "Did you dreamed today?")
+        delegate?.scheduleNotification(at: dateTime, daily: daily)
+
         if daily {
-            //println("Diariamente")
-            notification.repeatInterval = NSCalendar.Unit.day
             var dateFormatter: DateFormatter {
                 let formatter = DateFormatter()
                 formatter.timeStyle = .short
@@ -50,10 +48,6 @@ class SetNotificationViewController: UIViewController {
             }
             s = dateFormatter.string(from: dateTime)
         }
-        notification.fireDate = dateTime
-        notification.soundName = UILocalNotificationDefaultSoundName
-        UIApplication.shared.scheduleLocalNotification(notification)
-        
         
         //Show a Message iOS 8
         if daily {
@@ -74,7 +68,6 @@ class SetNotificationViewController: UIViewController {
         } else {
             daily = false
             datePicker.datePickerMode = UIDatePickerMode.dateAndTime
-            UIApplication.shared.cancelAllLocalNotifications()
         }
     }
     

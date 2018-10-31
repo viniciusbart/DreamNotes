@@ -21,7 +21,7 @@ class ListaPrincipalTableViewController: UITableViewController, NSFetchedResults
     @IBOutlet var myTableView: UITableView!
     
     override func viewDidLoad() {
-            super.viewDidLoad()
+        super.viewDidLoad()
         
         // STYLE
         //let settingsImg: UIImage = UIImage(named: "Settings")!
@@ -33,21 +33,18 @@ class ListaPrincipalTableViewController: UITableViewController, NSFetchedResults
         self.tableView.backgroundView = UIImageView(image: UIImage(named: "night-sky-stars"))
         
         //receive notifications when the preferred content size changes
-        NotificationCenter.default.addObserver(self,
-                                                         selector: "preferredContentSizeChanged:",
-                                                         name: NSNotification.Name.UIContentSizeCategoryDidChange,
-                                                         object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ListaPrincipalTableViewController.preferredContentSizeChanged(notification:)),
+                                               name: NSNotification.Name.UIContentSizeCategoryDidChange,
+                                               object: nil)
         
         //Set Notifications Observers
-        NotificationCenter.default.addObserver(self,
-                                                         selector:"makeALog:",
-                                                         name: NSNotification.Name(rawValue: "actionNoPressed"),
-                                                         object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ListaPrincipalTableViewController.makeALog(notification:)),
+                                               name: NSNotification.Name(rawValue: "actionNoPressed"),
+                                               object: nil)
         
-        NotificationCenter.default.addObserver(self,
-                                                         selector:"redirectToEditor:",
-                                                         name: NSNotification.Name(rawValue: "actionNotePressed"),
-                                                         object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ListaPrincipalTableViewController.redirectToEditor(notification:)),
+                                               name: NSNotification.Name(rawValue: "actionNotePressed"),
+                                               object: nil)
         
         fetchedResultController = getFetchedResultController()
         fetchedResultController.delegate = self
@@ -95,13 +92,13 @@ class ListaPrincipalTableViewController: UITableViewController, NSFetchedResults
         self.present(alert, animated: true, completion: nil)
     }
     
-    func makeALog(notification:NSNotification){
+    @objc func makeALog(notification:NSNotification){
         //Make a log when dismissed the Notificaition
         print("NO - Dismissed Notification Pressed")
         
     }
     
-    func redirectToEditor(notification:NSNotification){
+    @objc func redirectToEditor(notification:NSNotification){
         print("Note - Pressed")
         
         //Redirect to DreamEditorViewController when Notification is pressed
@@ -114,7 +111,7 @@ class ListaPrincipalTableViewController: UITableViewController, NSFetchedResults
         }
     }
     
-    func preferredContentSizeChanged(notification: NSNotification) {
+    @objc func preferredContentSizeChanged(notification: NSNotification) {
         tableView.reloadData()
     }
     
@@ -173,20 +170,22 @@ class ListaPrincipalTableViewController: UITableViewController, NSFetchedResults
             //cell.textLabel.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.0)
         }
         
-        //cell.textLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        cell.desc.text = dream.title
+        cell.desc.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.largeTitle)
+        cell.desc.text = dream.texto
         cell.data.text = dream.data
         return cell
     }
     
     //Delete
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        let managedObject:NSManagedObject = fetchedResultController.object(at: indexPath as IndexPath) as! NSManagedObject
-        managedObjectContext?.delete(managedObject)
-        do{
-            try managedObjectContext?.save()
-        }catch{
-            print("NÃO SALVO")
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let managedObject:NSManagedObject = fetchedResultController.object(at: indexPath as IndexPath) as! NSManagedObject
+            managedObjectContext?.delete(managedObject)
+            do{
+                try managedObjectContext?.save()
+            }catch{
+                print("NÃO SALVO")
+            }
         }
     }
     

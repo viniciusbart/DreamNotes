@@ -107,7 +107,7 @@ class DreamEditorViewController: UIViewController, UITextViewDelegate {
     }
     
     
-    func textViewShouldBeginEditing(_ txtDesc: UITextView) -> Bool {
+    func textViewShouldBeginEditing(_ txtDesc: UITextView) {
         if txtDesc.text == NSLocalizedString("Body", comment: "Tell me your dream...") {
             txtDesc.text = nil
         }
@@ -115,7 +115,6 @@ class DreamEditorViewController: UIViewController, UITextViewDelegate {
         if txtDesc.textColor == UIColor.lightGray {
             txtDesc.textColor = UIColor.black
         }
-        return true
     }
     
     
@@ -215,7 +214,7 @@ class DreamEditorViewController: UIViewController, UITextViewDelegate {
         drm.texto = txtDesc.text
         drm.data = date
         drm.timestamp = timeStamp
-        managedObjectContext
+        //managedObjectContext
         do{
             try managedObjectContext?.save()
         }catch{

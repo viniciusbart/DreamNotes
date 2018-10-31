@@ -10,21 +10,6 @@
 		812762AA1B3546BF00461FD3 /* BedtimeCalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812762A91B3546BF00461FD3 /* BedtimeCalcViewController.swift */; };
 		8144EEA51FF491670047EF35 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8144EEA41FF491670047EF35 /* TabBarViewController.swift */; };
 		815557B2202004FA00E5CAB8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 815557B1202004F900E5CAB8 /* Images.xcassets */; };
-		816BB827202A755100259E01 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 816BB826202A755000259E01 /* Info.plist */; };
-		816BB82E202A7BE100259E01 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 816BB82C202A7BE100259E01 /* Interface.storyboard */; };
-		816BB830202A7BE100259E01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 816BB82F202A7BE100259E01 /* Assets.xcassets */; };
-		816BB837202A7BE100259E01 /* Sleep Tracker Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 816BB836202A7BE100259E01 /* Sleep Tracker Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		816BB83C202A7BE100259E01 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816BB83B202A7BE100259E01 /* InterfaceController.swift */; };
-		816BB83E202A7BE100259E01 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816BB83D202A7BE100259E01 /* ExtensionDelegate.swift */; };
-		816BB840202A7BE100259E01 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816BB83F202A7BE100259E01 /* NotificationController.swift */; };
-		816BB842202A7BE100259E01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 816BB841202A7BE100259E01 /* Assets.xcassets */; };
-		816BB847202A7BE100259E01 /* Sleep Tracker.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 816BB82A202A7BE100259E01 /* Sleep Tracker.app */; };
-		816BB851202A7C5D00259E01 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 816BB850202A7C5D00259E01 /* HealthKit.framework */; };
-		816BB852202A7D4200259E01 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813257401FFDDAB2005BA1E8 /* Helper.swift */; };
-		816BB853202A7D9800259E01 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815557BC20200E9C00E5CAB8 /* Activity.swift */; };
-		816BB859202A7E0800259E01 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816BB858202A7E0800259E01 /* MotionManager.swift */; };
-		816BB85B202A7E6400259E01 /* RunningBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816BB85A202A7E6400259E01 /* RunningBuffer.swift */; };
-		816BB85C202A7E6900259E01 /* TrackerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8132573E1FFDBA5B005BA1E8 /* TrackerManager.swift */; };
 		817BD26D1B3BAFD60069BC69 /* WakeUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817BD26C1B3BAFD60069BC69 /* WakeUpViewController.swift */; };
 		CC15EBED19DE1F7C00E28BB0 /* DreamUpdaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15EBEC19DE1F7C00E28BB0 /* DreamUpdaterViewController.swift */; };
 		CC2285EB19EA676000E26679 /* SetNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2285EA19EA676000E26679 /* SetNotificationViewController.swift */; };
@@ -39,23 +24,6 @@
 		CCD222D419E0B8EF0003047B /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD222D319E0B8EF0003047B /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		816BB838202A7BE100259E01 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CC8BBA7519DCBB7900C6156D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 816BB835202A7BE100259E01;
-			remoteInfo = "Sleep Tracker Extension";
-		};
-		816BB845202A7BE100259E01 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CC8BBA7519DCBB7900C6156D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 816BB829202A7BE100259E01;
-			remoteInfo = "Sleep Tracker";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		813257361FFDB786005BA1E8 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -63,50 +31,20 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				816BB847202A7BE100259E01 /* Sleep Tracker.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		816BB84B202A7BE100259E01 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				816BB837202A7BE100259E01 /* Sleep Tracker Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		812762A91B3546BF00461FD3 /* BedtimeCalcViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BedtimeCalcViewController.swift; sourceTree = "<group>"; };
-		8132573E1FFDBA5B005BA1E8 /* TrackerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackerManager.swift; sourceTree = "<group>"; };
-		813257401FFDDAB2005BA1E8 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		8133E77F1B44FC4E00BE82D9 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
 		8133E7811B46364200BE82D9 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Main.strings; sourceTree = "<group>"; };
 		8144EEA41FF491670047EF35 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		815557B1202004F900E5CAB8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		815557BC20200E9C00E5CAB8 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
-		816BB8212029236C00259E01 /* SleepTrackerExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SleepTrackerExtension.entitlements; sourceTree = "<group>"; };
 		816BB826202A755000259E01 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		816BB82A202A7BE100259E01 /* Sleep Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sleep Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		816BB82D202A7BE100259E01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		816BB82F202A7BE100259E01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		816BB831202A7BE100259E01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		816BB836202A7BE100259E01 /* Sleep Tracker Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Sleep Tracker Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		816BB83B202A7BE100259E01 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		816BB83D202A7BE100259E01 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		816BB83F202A7BE100259E01 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		816BB841202A7BE100259E01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		816BB843202A7BE100259E01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		816BB844202A7BE100259E01 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		816BB84F202A7C5D00259E01 /* DreamNotes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DreamNotes.entitlements; sourceTree = "<group>"; };
-		816BB850202A7C5D00259E01 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
-		816BB858202A7E0800259E01 /* MotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MotionManager.swift; path = ../../../.Trash/MotionManager.swift; sourceTree = "<group>"; };
-		816BB85A202A7E6400259E01 /* RunningBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RunningBuffer.swift; path = "../../../Desktop/SwingWatchUsingDeviceMotionontheWatch/SwingWatch WatchKit Extension/RunningBuffer.swift"; sourceTree = "<group>"; };
 		817BD26C1B3BAFD60069BC69 /* WakeUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WakeUpViewController.swift; sourceTree = "<group>"; };
 		81FD61211B4198D20085E1B2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		81FD61231B421EFC0085E1B2 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
@@ -132,18 +70,10 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		816BB833202A7BE100259E01 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CC8BBA7A19DCBB7900C6156D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				816BB851202A7C5D00259E01 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,38 +83,8 @@
 		816BB8222029236C00259E01 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				816BB850202A7C5D00259E01 /* HealthKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		816BB82B202A7BE100259E01 /* Sleep Tracker */ = {
-			isa = PBXGroup;
-			children = (
-				816BB82C202A7BE100259E01 /* Interface.storyboard */,
-				816BB82F202A7BE100259E01 /* Assets.xcassets */,
-				816BB831202A7BE100259E01 /* Info.plist */,
-			);
-			path = "Sleep Tracker";
-			sourceTree = "<group>";
-		};
-		816BB83A202A7BE100259E01 /* Sleep Tracker Extension */ = {
-			isa = PBXGroup;
-			children = (
-				815557BC20200E9C00E5CAB8 /* Activity.swift */,
-				816BB858202A7E0800259E01 /* MotionManager.swift */,
-				816BB8212029236C00259E01 /* SleepTrackerExtension.entitlements */,
-				816BB83B202A7BE100259E01 /* InterfaceController.swift */,
-				816BB83D202A7BE100259E01 /* ExtensionDelegate.swift */,
-				816BB83F202A7BE100259E01 /* NotificationController.swift */,
-				816BB85A202A7E6400259E01 /* RunningBuffer.swift */,
-				813257401FFDDAB2005BA1E8 /* Helper.swift */,
-				8132573E1FFDBA5B005BA1E8 /* TrackerManager.swift */,
-				816BB841202A7BE100259E01 /* Assets.xcassets */,
-				816BB843202A7BE100259E01 /* Info.plist */,
-				816BB844202A7BE100259E01 /* PushNotificationPayload.apns */,
-			);
-			path = "Sleep Tracker Extension";
 			sourceTree = "<group>";
 		};
 		CC8BBA7419DCBB7900C6156D = {
@@ -193,8 +93,6 @@
 				CC8BBA7F19DCBB7900C6156D /* DreamNotes */,
 				816BB8222029236C00259E01 /* Frameworks */,
 				CC8BBA7E19DCBB7900C6156D /* Products */,
-				816BB82B202A7BE100259E01 /* Sleep Tracker */,
-				816BB83A202A7BE100259E01 /* Sleep Tracker Extension */,
 			);
 			sourceTree = "<group>";
 		};
@@ -202,8 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				CC8BBA7D19DCBB7900C6156D /* DreamNotes.app */,
-				816BB82A202A7BE100259E01 /* Sleep Tracker.app */,
-				816BB836202A7BE100259E01 /* Sleep Tracker Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -244,40 +140,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		816BB829202A7BE100259E01 /* Sleep Tracker */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 816BB84C202A7BE100259E01 /* Build configuration list for PBXNativeTarget "Sleep Tracker" */;
-			buildPhases = (
-				816BB828202A7BE100259E01 /* Resources */,
-				816BB84B202A7BE100259E01 /* Embed App Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				816BB839202A7BE100259E01 /* PBXTargetDependency */,
-			);
-			name = "Sleep Tracker";
-			productName = "Sleep Tracker";
-			productReference = 816BB82A202A7BE100259E01 /* Sleep Tracker.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		816BB835202A7BE100259E01 /* Sleep Tracker Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 816BB848202A7BE100259E01 /* Build configuration list for PBXNativeTarget "Sleep Tracker Extension" */;
-			buildPhases = (
-				816BB832202A7BE100259E01 /* Sources */,
-				816BB833202A7BE100259E01 /* Frameworks */,
-				816BB834202A7BE100259E01 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Sleep Tracker Extension";
-			productName = "Sleep Tracker Extension";
-			productReference = 816BB836202A7BE100259E01 /* Sleep Tracker Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
-		};
 		CC8BBA7C19DCBB7900C6156D /* DreamNotes */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC8BBA9F19DCBB7900C6156D /* Build configuration list for PBXNativeTarget "DreamNotes" */;
@@ -290,7 +152,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				816BB846202A7BE100259E01 /* PBXTargetDependency */,
 			);
 			name = DreamNotes;
 			productName = DreamNotes;
@@ -308,28 +169,13 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Baza Inc";
 				TargetAttributes = {
-					816BB829202A7BE100259E01 = {
-						CreatedOnToolsVersion = 9.2;
-						DevelopmentTeam = U3R74ZQVJS;
-						ProvisioningStyle = Automatic;
-					};
-					816BB835202A7BE100259E01 = {
-						CreatedOnToolsVersion = 9.2;
-						DevelopmentTeam = U3R74ZQVJS;
-						ProvisioningStyle = Automatic;
-						SystemCapabilities = {
-							com.apple.BackgroundModes.watchos.extension = {
-								enabled = 1;
-							};
-						};
-					};
 					CC8BBA7C19DCBB7900C6156D = {
 						CreatedOnToolsVersion = 6.0.1;
 						DevelopmentTeam = U3R74ZQVJS;
 						LastSwiftMigration = 0830;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -354,37 +200,17 @@
 			projectRoot = "";
 			targets = (
 				CC8BBA7C19DCBB7900C6156D /* DreamNotes */,
-				816BB829202A7BE100259E01 /* Sleep Tracker */,
-				816BB835202A7BE100259E01 /* Sleep Tracker Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		816BB828202A7BE100259E01 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				816BB830202A7BE100259E01 /* Assets.xcassets in Resources */,
-				816BB82E202A7BE100259E01 /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		816BB834202A7BE100259E01 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				816BB842202A7BE100259E01 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CC8BBA7B19DCBB7900C6156D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				815557B2202004FA00E5CAB8 /* Images.xcassets in Resources */,
 				CCC4AC191A0AF52D00146537 /* Localizable.strings in Resources */,
-				816BB827202A755100259E01 /* Info.plist in Resources */,
 				CC8BBA8B19DCBB7900C6156D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,21 +218,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		816BB832202A7BE100259E01 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				816BB853202A7D9800259E01 /* Activity.swift in Sources */,
-				816BB859202A7E0800259E01 /* MotionManager.swift in Sources */,
-				816BB840202A7BE100259E01 /* NotificationController.swift in Sources */,
-				816BB83E202A7BE100259E01 /* ExtensionDelegate.swift in Sources */,
-				816BB83C202A7BE100259E01 /* InterfaceController.swift in Sources */,
-				816BB85B202A7E6400259E01 /* RunningBuffer.swift in Sources */,
-				816BB85C202A7E6900259E01 /* TrackerManager.swift in Sources */,
-				816BB852202A7D4200259E01 /* Helper.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CC8BBA7919DCBB7900C6156D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -428,28 +239,7 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		816BB839202A7BE100259E01 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 816BB835202A7BE100259E01 /* Sleep Tracker Extension */;
-			targetProxy = 816BB838202A7BE100259E01 /* PBXContainerItemProxy */;
-		};
-		816BB846202A7BE100259E01 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 816BB829202A7BE100259E01 /* Sleep Tracker */;
-			targetProxy = 816BB845202A7BE100259E01 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		816BB82C202A7BE100259E01 /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				816BB82D202A7BE100259E01 /* Base */,
-			);
-			name = Interface.storyboard;
-			sourceTree = "<group>";
-		};
 		CC8BBA8919DCBB7900C6156D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -479,116 +269,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		816BB849202A7BE100259E01 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_STYLE = Automatic;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = U3R74ZQVJS;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "Sleep Tracker Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.BazaInc.DreamNotes.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
-			};
-			name = Debug;
-		};
-		816BB84A202A7BE100259E01 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_STYLE = Automatic;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = U3R74ZQVJS;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "Sleep Tracker Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.BazaInc.DreamNotes.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
-			};
-			name = Release;
-		};
-		816BB84D202A7BE100259E01 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = WatchAppIcon;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = U3R74ZQVJS;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				IBSC_MODULE = Sleep_Tracker_Extension;
-				INFOPLIST_FILE = "Sleep Tracker/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.BazaInc.DreamNotes.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
-			};
-			name = Debug;
-		};
-		816BB84E202A7BE100259E01 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = WatchAppIcon;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = U3R74ZQVJS;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				IBSC_MODULE = Sleep_Tracker_Extension;
-				INFOPLIST_FILE = "Sleep Tracker/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.BazaInc.DreamNotes.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
-			};
-			name = Release;
-		};
 		CC8BBA9D19DCBB7900C6156D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -697,14 +377,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_ENTITLEMENTS = DreamNotes/DreamNotes.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = U3R74ZQVJS;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = DreamNotes/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.BazaInc.$(PRODUCT_NAME:rfc1034identifier)";
@@ -722,14 +401,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_ENTITLEMENTS = DreamNotes/DreamNotes.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = U3R74ZQVJS;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = DreamNotes/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.BazaInc.$(PRODUCT_NAME:rfc1034identifier)";
@@ -745,24 +423,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		816BB848202A7BE100259E01 /* Build configuration list for PBXNativeTarget "Sleep Tracker Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				816BB849202A7BE100259E01 /* Debug */,
-				816BB84A202A7BE100259E01 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		816BB84C202A7BE100259E01 /* Build configuration list for PBXNativeTarget "Sleep Tracker" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				816BB84D202A7BE100259E01 /* Debug */,
-				816BB84E202A7BE100259E01 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		CC8BBA7819DCBB7900C6156D /* Build configuration list for PBXProject "DreamNotes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

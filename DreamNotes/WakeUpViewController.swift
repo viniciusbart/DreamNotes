@@ -29,6 +29,16 @@ class WakeUpViewController: UIViewController, UITabBarDelegate {
             NSAttributedStringKey.font: UIFont(name: "Chalkduster", size: 24)!
         ]
         UINavigationBar.appearance().titleTextAttributes = attrs
+        
+        lblHead.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.title1)
+        lblSubHead.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.subheadline)
+        lblTitle.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.subheadline)
+        lblInfo.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)
+        
+        lblTime3.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.callout)
+        lblTime4.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.callout)
+        lblTime5.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.callout)
+        lblTime6.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.callout)
     }
     
     override func viewWillAppear(_ animated: Bool) {
